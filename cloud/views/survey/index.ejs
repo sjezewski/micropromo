@@ -1,0 +1,10 @@
+All Submitted Surveys
+
+<div class="main_content">
+  	<% surveys.forEach(function(survey) { %>
+  		<div class="survey">
+	  		<p> ID: <%= survey.id %> </p>
+	  		<p> TIMESTAMP: <%= survey.createdAt %> </p>
+  		</div>
+    <% }) %>
+</div>

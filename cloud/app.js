@@ -18,9 +18,9 @@ app.get('/hello', function(req, res) {
 
 var surveyController = require('cloud/controllers/survey.js');
 
-//app.get('/survey/new', function(req, res) {
+app.get('/survey', surveyController.index);
 app.get('/survey/new', surveyController.new);
-
+app.post('/survey/create', surveyController.create);
 
 // // Example reading from the request query string of an HTTP get request.
 // app.get('/test', function(req, res) {

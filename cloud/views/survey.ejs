@@ -3,14 +3,47 @@
 <html>
   <head>
     <title>Survey</title>
+    <link rel='stylesheet' href='/css/main.css'>
   </head>
   <body>
     <h1>How likely would you use each detergent on your favorite colored shirt?  </h1>
     <p><%= message %></p>    
 
     <form method="POST" action="/submit">
-      
-      
+
+        <div class='item'>
+          <img src='/images/all.jpg'>
+	  <label for='item1'> All: </label>
+	  <input id='item1' type='range' min='0' max='100' step='1'/>
+	 </div>
+
+        <div class='item'>
+          <img src='/images/gain.jpg'>
+	  <label for='gain'> Gain: </label>
+	  <input id='gain' type='range' min='0' max='100' step='1'/>
+	 </div>
+
+
+        <div class='item'>
+          <img src='/images/purex.jpg'>
+	  <label for='purex'> Purex: </label>
+	  <input id='purex' type='range' min='0' max='100' step='1'/>
+	 </div>
+
+
+        <div class='item'>
+          <img src='/images/tide.jpg'>
+	  <label for='tide'> Tide: </label>
+	  <input id='tide' type='range' min='0' max='100' step='1'/>
+	 </div>
+
+
+        <div class='item'>
+          <img src='/images/xtra.jpg'>
+	  <label for='xtra'> Xtra: </label>
+	  <input id='xtra' type='range' min='0' max='100' step='1'/>
+	 </div>
+
 
 
     </form>

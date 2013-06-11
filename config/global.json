@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "_default": {
+            "link": "simplesurvey"
+        }, 
+        "simplesurvey": {
+            "applicationId": "QHc1hgsPjxtIGtefrPcUD7yqoH6QphbRR5Aa58pd", 
+            "masterKey": "wUC5OfalxwbOrlYkqlXcUxT9HyKAcHyem3hI0EM9"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.8"
+    }
+}

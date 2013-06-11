@@ -7,6 +7,7 @@ var app = express();
 app.set('views', 'cloud/views');  // Specify the folder to find templates
 app.set('view engine', 'ejs');    // Set the template engine
 app.use(express.bodyParser());    // Middleware for reading request body
+app.use(express.methodOverride());
 
 // This is an example of hooking up a request handler with a specific request
 // path and HTTP verb using the Express routing API.
@@ -15,9 +16,10 @@ app.get('/hello', function(req, res) {
 });
 
 
-app.get('/survey', function(req, res) {
-  res.render('survey', { message: 'Please fill out the survey below' });
-});
+var surveyController = require('cloud/controllers/survey.js');
+
+//app.get('/survey/new', function(req, res) {
+app.get('/survey/new', surveyController.new);
 
 
 // // Example reading from the request query string of an HTTP get request.

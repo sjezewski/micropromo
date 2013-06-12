@@ -36,3 +36,9 @@ exports.new = function(req, res) {
 	}
     );
 }
+
+exports.complete = function(req, res) {
+    // Create a promo code for this user
+
+    res.render('submission/complete');
+}

@@ -1,0 +1,10 @@
+All Submitted Photos
+
+<div class="main_content">
+  	<% photos.forEach(function(photo) { %>
+  		<div class="photo">
+	  		<p> ID: <%= photo.id %> </p>
+	  		<p> TIMESTAMP: <%= photo.createdAt %> </p>
+  		</div>
+    <% }) %>
+</div>

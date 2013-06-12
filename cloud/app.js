@@ -22,6 +22,13 @@ app.get('/survey', surveyController.index);
 app.get('/survey/new', surveyController.new);
 app.post('/survey/create', surveyController.create);
 
+var photoController = require('cloud/controllers/photo.js');
+
+app.get('/photo', photoController.index);
+app.get('/photo/new', photoController.new);
+app.post('/photo/create', photoController.create);
+
+
 // // Example reading from the request query string of an HTTP get request.
 // app.get('/test', function(req, res) {
 //   // GET http://example.parseapp.com/test?message=hello

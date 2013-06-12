@@ -24,11 +24,11 @@ app.get('/survey', surveyController.index);
 app.get('/survey/new', surveyController.new);
 app.post('/survey/create', surveyController.create);
 
-var photoController = require('cloud/controllers/photo.js');
+var submissionController = require('cloud/controllers/submission.js');
 
-app.get('/photo', photoController.index);
-app.get('/photo/new', photoController.new);
-app.post('/photo/created', photoController.created);
+app.get('/submissions', submissionController.index);
+app.get('/submission/new', submissionController.new);
+app.post('/submission/created', submissionController.created);
 
 
 

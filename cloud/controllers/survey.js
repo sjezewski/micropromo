@@ -20,7 +20,6 @@ exports.index = function(req, res) {
 exports.create = function(req, res) {
     var survey = new Survey();
     survey.save(_.pick(req.body, 'all', 'gain', 'purex', 'tide', 'xtra')).then(
-//    survey.save(null).then(
 	function() {
 	    res.redirect('/survey')
 	},

@@ -30,6 +30,12 @@ app.get('/submissions', submissionController.index);
 app.get('/submission/new', submissionController.new);
 app.post('/submission/created', submissionController.created);
 
+var promoController = require('cloud/controllers/promo.js');
+
+//app.get('/promo', submissionController.index);
+app.get('/promo/new', promoController.new);
+app.get('/promo/check', promoController.check);
+
 
 
 // // Example reading from the request query string of an HTTP get request.

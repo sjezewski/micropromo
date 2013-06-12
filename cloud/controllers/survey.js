@@ -24,7 +24,7 @@ exports.create = function(req, res) {
 
     survey.save(_.pick(req.body, 'all', 'gain', 'purex', 'tide', 'xtra')).then(
 	function() {
-	    res.redirect('/survey')
+	    res.redirect('/promo/create?submission=' + req.body.submission)
 	},
 	function() {
 	    res.send(500, 'Failed saving survey');

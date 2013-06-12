@@ -15,6 +15,8 @@ app.get('/hello', function(req, res) {
   res.render('hello', { message: 'Congrats, you just set up your app!' });
 });
 
+app.locals.APP_ID = "QHc1hgsPjxtIGtefrPcUD7yqoH6QphbRR5Aa58pd";
+app.locals.JS_KEY = "sLF8zZjtOPSk7xbeHwULNMNvi3Q2krXVgtuT4kvf";
 
 var surveyController = require('cloud/controllers/survey.js');
 
@@ -26,7 +28,8 @@ var photoController = require('cloud/controllers/photo.js');
 
 app.get('/photo', photoController.index);
 app.get('/photo/new', photoController.new);
-app.post('/photo/create', photoController.create);
+app.post('/photo/created', photoController.created);
+
 
 
 // // Example reading from the request query string of an HTTP get request.

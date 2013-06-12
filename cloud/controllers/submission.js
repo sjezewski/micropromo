@@ -23,11 +23,13 @@ exports.created = function(req, res) {
 
 exports.new = function(req, res) {
     var submission = new Submission();
-    var nextURL = 'survey/new';
+
+    // Note -- javascript strings can't be converted to bytes, so you cannot create a photo file from a string
+    // But, the 'parseExpressRawBody()' seems to allow to parse http data into a byte array ... in which case we may be able to do the photo upload purely server side
 
     submission.save().then(
 	function() {
-	    res.render('submission/new', {submission: submission.id, nextURL: nextURL})
+	    res.render('submission/new', {submission: submission.id})
 	},
 	function() {
 	    res.send(500, 'Failed saving survey');

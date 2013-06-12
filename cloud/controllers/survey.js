@@ -19,6 +19,9 @@ exports.index = function(req, res) {
 
 exports.create = function(req, res) {
     var survey = new Survey();
+
+    survey.set("parent", req.body.submission);
+
     survey.save(_.pick(req.body, 'all', 'gain', 'purex', 'tide', 'xtra')).then(
 	function() {
 	    res.redirect('/survey')
@@ -30,5 +33,5 @@ exports.create = function(req, res) {
 }
 
 exports.new = function(req, res) {
-    res.render('survey/new', {});
+    res.render('survey/new', {submission: req.query.submission});
 }

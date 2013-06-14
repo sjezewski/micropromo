@@ -22,6 +22,8 @@ exports.create = function(req, res) {
 
     survey.set("parent", req.body.submission);
 
+    // This is where you would do any data validations
+
     survey.save(_.pick(req.body, 'all', 'gain', 'purex', 'tide', 'xtra')).then(
 	function() {
 	    res.redirect('/promo/create?submission=' + req.body.submission)

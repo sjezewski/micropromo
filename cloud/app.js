@@ -33,7 +33,7 @@ app.post('/submission/created', submissionController.created);
 var promoController = require('cloud/controllers/promo.js');
 
 //app.get('/promo', submissionController.index);
-app.get('/promo/new', promoController.new);
+app.get('/promo/create', promoController.create);
 app.get('/promo/check', promoController.check);
 
 

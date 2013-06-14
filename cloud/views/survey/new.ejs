@@ -6,48 +6,77 @@
     <link rel='stylesheet' href='/css/main.css'>
   </head>
   <body>
-    <h1>How likely would you use each detergent on your favorite colored shirt?  </h1>
 
-    <form method="POST" action="/survey/create">
+    <div id='header'>
+      <h1> Promo </h1>
+
+      <div id='breadcrumbs'>
+	<span> Photo </span> >
+	<span class='active'> Survey </span> >
+	<span> Complete </span>	
+      </div>
+      
+    </div>
+
+    <div id='content'>
+    
+    <h2>How likely would you use each detergent on your favorite colored shirt?  </h2>
+
+    <form class='mw_relative' method="POST" action="/survey/create">
         <input class='disabled' type='text' name='submission' value='<%= submission %>'/>
 
         <div class='item'>
           <img src='/images/all.jpg'>
-	  <label for='all'> All: </label>
-	  <input name='all' type='range' min='0' max='100' step='1'/>
+	  <div class='info'>
+  	    <label for='all'> All </label>
+	    <input name='all' type='range' min='0' max='100'
+          step='1'/>
+	  </div>
 	 </div>
 
         <div class='item'>
           <img src='/images/gain.jpg'>
-	  <label for='gain'> Gain: </label>
-	  <input name='gain' type='range' min='0' max='100' step='1'/>
+	  <div class='info'>
+  	    <label for='gain'> Gain </label>
+	    <input name='gain' type='range' min='0' max='100' step='1'/>
+	  </div>
 	 </div>
 
 
         <div class='item'>
           <img src='/images/purex.jpg'>
-	  <label for='purex'> Purex: </label>
-	  <input name='purex' type='range' min='0' max='100' step='1'/>
+	  <div class='info'>	  
+  	    <label for='purex'> Purex </label>
+	    <input name='purex' type='range' min='0' max='100'
+          step='1'/>
+	  </div>
 	 </div>
 
 
         <div class='item'>
           <img src='/images/tide.jpg'>
-	  <label for='tide'> Tide: </label>
-	  <input name='tide' type='range' min='0' max='100' step='1'/>
+	  <div class='info'>	  
+	    <label for='tide'> Tide </label>
+	    <input name='tide' type='range' min='0' max='100'
+          step='1'/>
+	  </div>
 	 </div>
 
 
         <div class='item'>
           <img src='/images/xtra.jpg'>
-	  <label for='xtra'> Xtra: </label>
-	  <input name='xtra' type='range' min='0' max='100' step='1'/>
-	 </div>
+	  <div class='info'>
+  	    <label for='xtra'> Xtra </label>
+	    <input name='xtra' type='range' min='0' max='100'
+          step='1'/>
+	  </div>
+	</div>
 
 
 	 <input type='submit'/>
     </form>
 
-
+    </div>
+	 
   </body>
 </html>
